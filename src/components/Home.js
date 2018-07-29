@@ -2,9 +2,15 @@ import React from "react";
 
 export class Home extends React.Component{
     render(){
+
+        let comp = "";
+        if(true){
+            comp = <p>Hello</p>
+        }
         return(
-            <div>
-                <h2>This is the new Component</h2>
+            <div className="container">
+                <p>This is the new Component</p>
+                { comp }
             </div>
         );
     }
