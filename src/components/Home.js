@@ -3,14 +3,14 @@ import React from "react";
 export class Home extends React.Component{
     render(){
 
-        let comp = "";
-        if(true){
-            comp = <p>Hello</p>
-        }
         return(
             <div className="container">
-                <p>This is the new Component</p>
-                { comp }
+                <p> Name : {this.props.name}, Age : {this.props.age}</p>
+                <p>User Object => Name : {this.props.User.name}</p>
+                <div>
+                    <p>Hobbies : </p>
+                    <ul>{this.props.User.hobbies.map((hobby) => <li>{hobby}</li>)}</ul>
+                </div>
             </div>
         );
     }
