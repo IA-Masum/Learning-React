@@ -1,10 +1,9 @@
 import React from "react";
 
 export class Header extends React.Component{
-
     render(){
         return(
-            <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
+            <nav className="navbar navbar-light bg-light navbar-expand-sm">
                 <div className="container">
                     <ul className="navbar-nav">
                         <li className="nav-item">
@@ -18,6 +17,7 @@ export class Header extends React.Component{
                         </li>
                     </ul>
                 </div>
+
             </nav>
         );
     }

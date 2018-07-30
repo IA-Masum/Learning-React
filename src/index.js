@@ -1,18 +1,22 @@
 import React from "react";
 import { render } from "react-dom";
 
-import { Home} from "./component/Home";
-import { Header} from "./component/Header";
+import { Header } from "./component/Header";
+import { Home } from "./component/Home";
 
-class App extends React.Component {
+class App extends React.Component{
     render(){
+        let user = {
+            "name": "Tania",
+            "hobbies": ["Reading", "Dancing", "Singing"]
+        }
         return(
             <div>
-                <Header />
-                <Home />
+                <Header/>
+                <Home name={"Imran"} age={"25"} user ={user} />
             </div>
         );
     }
 }
 
-render(<App />, window.document.getElementById("app"));
+render(<App/>,window.document.getElementById("app"));
