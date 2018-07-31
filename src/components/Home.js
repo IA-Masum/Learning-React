@@ -3,16 +3,24 @@ import PropsTypes from "prop-types";
 
 export class Home extends React.Component{
 
+    constructor(props){
+        super();
+        this.age  = props.age
+    }
+
+
+    onMakeOlder (){
+        this.age += 3;
+        console.log(this.age);
+    }
+
     render(){
-        var p = this.props;
         return(
             <div className="container">
-                <p> Name : {p.name}, Age : {p.age}</p>
-                <p>User Object => Name : {this.props.User.name}</p>
-                <div>
-                    <p>Hobbies : </p>
-                    <ul>{p.User.hobbies.map((hobby , i) => <li key={i}>{hobby}</li>)}</ul>
-                </div>
+                <hr/>
+                <p> Name : {this.props.name}, Age : {this.age}</p>
+                <hr/>
+                <button onClick={ () => this.onMakeOlder()} className="btn btn-primary">Make Me Older!</button>
             </div>
         );
     }
@@ -21,5 +29,4 @@ export class Home extends React.Component{
 Home.PropsTypes = {
     name : PropsTypes.string,
     age : PropsTypes.number,
-    User : PropsTypes.object
 };
