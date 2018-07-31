@@ -7,7 +7,7 @@ class App extends React.Component{
     render(){
         return(
             <div className="container">
-                <Header/>
+                <Header homeLink={"Home"}/>
                 <Home name={"Imran"} initialAge={27}/>
             </div>
         );
