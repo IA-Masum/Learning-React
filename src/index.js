@@ -13,7 +13,7 @@ class App extends React.Component{
         return(
             <div>
                 <Header/>
-                <Home name={"Imran"} age={"25"} user ={user} />
+                <Home name={"IA Masum"} age={25} user ={user} />
             </div>
         );
     }
