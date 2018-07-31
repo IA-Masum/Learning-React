@@ -8,7 +8,7 @@ class App extends React.Component{
         return(
             <div className="container">
                 <Header/>
-                <Home name={"Imran"} age={27}/>
+                <Home name={"Imran"} initialAge={27}/>
             </div>
         );
     }
