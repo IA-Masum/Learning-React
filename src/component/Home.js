@@ -2,18 +2,32 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export class Home extends React.Component{
+
+    constructor(props){
+        super();
+        this.sate = {
+            age : props.initialAge
+        };
+    }
+
+    makeOlder (){
+        this.setState(
+
+            {
+                age: this.sate.age += 3
+            }
+            
+        );
+    }
     render(){
         const p = this.props;
         return(
             <div className="container">
                 <p className="lead">This is a new component</p>
                 <p>Your Name : {p.name}</p>
-                <p>Your Name : {p.age}</p>
-                <p>Your Name : {p.user.name}</p>
-                <div>
-                    <h3>Hobbies</h3>
-                    <ol>{p.user.hobbies.map((hobby , i) => <li key= {i} >{hobby}</li>)}</ol>
-                </div>
+                <p>Your Age : {this.sate.age}</p>
+                <hr/>
+                <button onClick={this.makeOlder.bind(this)} className="btn btn-primary">Make Me older!</button>
             </div>
         );
     }
@@ -22,7 +36,5 @@ export class Home extends React.Component{
 Home.propTypes  = {
 
     name: PropTypes.string,
-    age : PropTypes.number,
-    user : PropTypes.object
-
+    initialAge : PropTypes.number,
 };
