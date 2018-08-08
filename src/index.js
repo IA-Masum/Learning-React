@@ -33,6 +33,7 @@ class App extends React.Component{
                     initialAge={27}
                     greet={this.onGreet}
                     changeName = {this.changeHomeLink.bind(this)}
+                    initialLinkName = {this.state.homeLink}
                 />
             </div>
         );
